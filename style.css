@@ -1,0 +1,113 @@
+ :root{
+    --soft-voilet:hsl(273, 75%, 66%);
+    --soft-blue:hsl(240, 73%, 65%);
+    --very-dark-destaurate-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --very-dark-grayish-blue:hsl(237, 12%, 33%);
+    --dark-grayish-blue:hsl(240, 6%, 50%);
+    --light-grayish-blue:hsl(240, 5%, 91%);
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom, var(--soft-voilet),var(--soft-blue) );
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+ }
+ .wrapper{
+    background-color: var(--light-grayish-blue);
+    height: 500px;
+    width: 1000px;
+    border-radius: 30px;
+    display: flex;
+ }
+ .left{
+    overflow: hidden;
+    width: 51%;
+    background: url(./images/bg-pattern-desktop.svg); 
+    background-size: 69%;
+    background-attachment: fixed;
+    background-position:-60% 70%;
+    background-repeat: no-repeat;
+ }
+ .left img{
+    position: relative;
+    scale: 1.1;
+    margin-left: -50px;
+    margin-top: 52px;
+ }
+ h1{
+    font-weight: 700;
+ }
+ .left .box{
+    position: absolute;
+    top: 330px;
+    left: 418px;
+ }
+ .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+ }
+ .top{display: none;}
+ .accordion-item {
+    background-color: var(--light-grayish-blue);
+    font-weight: 400;
+ }
+ .accordion-button{
+    background-color: var(--light-grayish-blue);
+    font-weight: 700;
+ }
+ .accordion{
+    width: 90%;
+    --bs-accordion-border-color:none;
+    --bs-accordion-active-bg:none;
+    --bs-accordion-btn-icon:url(https://svgshare.com/i/10WX.svg);
+    --bs-accordion-btn-active-icon:url(https://svgshare.com/i/10WX.svg);
+    --bs-accordion-btn-focus-border-color: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: var(--soft-red)
+ }
+ @media ( min-width:100px) and (max-width:500px){
+    body{ 
+        height: 100%;
+        width: 100%;
+    }
+    .wrapper{
+        margin-top: 80px;
+        width: 90%;
+        height: 98vh;
+        margin-bottom: 20px;
+    }
+    .left{ 
+        display: none;
+    }
+    .top{
+        display: block; 
+    }
+    .top .ill{ 
+        scale: 0.9;
+        position: absolute;
+        top: 90px;
+        left: 50px;
+    }
+    .top .mob-box{
+        scale: 0.7;
+        position: absolute;
+        top: -26px;
+    }
+    .right{
+        margin-top: 80px;
+        width: 100%;
+    }
+ }
